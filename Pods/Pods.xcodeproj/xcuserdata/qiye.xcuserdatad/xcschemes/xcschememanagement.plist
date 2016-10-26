@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-KRVideoPlayer-KRVideoPlayer-KRVideoPlayer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-KRVideoPlayer-KRVideoPlayer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-KRVideoPlayer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>194D7764FE8186DF9F4E15C1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A2D9B2954C0DD27294DCDA9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>62E0FFBC51104C48B20D4F1C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
