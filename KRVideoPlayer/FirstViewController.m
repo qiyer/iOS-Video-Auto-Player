@@ -37,8 +37,7 @@
 
 - (IBAction)playRemoteVideo:(id)sender
 {
-    NSURL *videoURL = [NSURL URLWithString:@"https://mvvideo5.meitudata.com/57ea0c22ec7da2114.mp4"];
-    [self playVideoWithURL:videoURL];
+    [self playVideoWithURL:nil];
 }
 
 - (void)playVideoWithURL:(NSURL *)url
@@ -47,18 +46,31 @@
         CGFloat width = [UIScreen mainScreen].bounds.size.width;
         self.videoController = [[KRVideoPlayerController alloc] initWithFrame:CGRectMake(0, 0, width, width*(9.0/16.0))];
         __weak typeof(self)weakSelf = self;
+        
         [self.videoController setKRVideoPlayBlock:^(KRVideoPlayType type,NSInteger index){
+            
             if(type == KRVideoPlayClose){
                 weakSelf.videoController = nil;
+                NSLog(@"关闭视频播放器");
+                
             }else if(type == KRVideoPlayNext){
                 
+                NSLog(@"播放视频index＝%ld",(long)index);
             }
+            
         }];
         [self.videoController showInWindow];
     }
+    
+    if(url){
+        //播放单个视频
+        self.videoController.contentURL = url;
+        return;
+    }
+    
+    //播放多个视频
     NSArray * urls = @[@"https://mvvideo5.meitudata.com/57ea0c22ec7da2114.mp4",@"https://mvvideo5.meitudata.com/57ef1d932ef465184.mp4",@"https://mvvideo5.meitudata.com/578da9761930e4509.mp4",@"https://mvvideo5.meitudata.com/57ee0c932c8c09697.mp4"];
     [self.videoController setURLArray:urls];
-//    self.videoController.contentURL = url;
 }
 
 @end
